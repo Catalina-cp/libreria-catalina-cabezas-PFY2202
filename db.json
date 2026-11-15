@@ -1,0 +1,222 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "nombre": "Ficción",
+      "icono": "📖",
+      "descripcion": "Novelas y relatos que te llevan a otros mundos y otras vidas."
+    },
+    {
+      "id": 2,
+      "nombre": "Ciencia Ficción",
+      "icono": "🚀",
+      "descripcion": "Futuros posibles, tecnología y viajes entre las estrellas."
+    },
+    {
+      "id": 3,
+      "nombre": "Fantasía",
+      "icono": "🐉",
+      "descripcion": "Magia, criaturas y aventuras épicas en mundos imaginarios."
+    },
+    {
+      "id": 4,
+      "nombre": "Misterio",
+      "icono": "🔍",
+      "descripcion": "Crímenes, enigmas e investigaciones que no te dejarán soltar el libro."
+    },
+    {
+      "id": 5,
+      "nombre": "Historia",
+      "icono": "🏛️",
+      "descripcion": "Del pasado remoto a la actualidad: cómo llegamos hasta aquí."
+    },
+    {
+      "id": 6,
+      "nombre": "Tecnología",
+      "icono": "💻",
+      "descripcion": "Programación, arquitectura de software y buenas prácticas."
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "titulo": "Cien años de soledad",
+      "autor": "Gabriel García Márquez",
+      "anio": 1967,
+      "precio": 14990,
+      "disponible": true,
+      "descripcion": "La saga de la familia Buendía en el pueblo imaginario de Macondo, donde lo cotidiano y lo extraordinario conviven sin sobresaltos."
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "titulo": "La casa de los espíritus",
+      "autor": "Isabel Allende",
+      "anio": 1982,
+      "precio": 12990,
+      "disponible": true,
+      "descripcion": "Tres generaciones de mujeres de una familia chilena atravesadas por el amor, la política y lo sobrenatural."
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "titulo": "Pedro Páramo",
+      "autor": "Juan Rulfo",
+      "anio": 1955,
+      "precio": 9990,
+      "disponible": false,
+      "descripcion": "Un hombre viaja a Comala en busca de su padre y encuentra un pueblo habitado por voces del pasado."
+    },
+    {
+      "id": 4,
+      "categoryId": 2,
+      "titulo": "Fundación",
+      "autor": "Isaac Asimov",
+      "anio": 1951,
+      "precio": 13990,
+      "disponible": true,
+      "descripcion": "Un matemático predice la caída de un imperio galáctico y propone un plan para acortar la era oscura que vendrá."
+    },
+    {
+      "id": 5,
+      "categoryId": 2,
+      "titulo": "Dune",
+      "autor": "Frank Herbert",
+      "anio": 1965,
+      "precio": 17990,
+      "disponible": true,
+      "descripcion": "Intrigas políticas, religión y ecología en el desértico planeta Arrakis, fuente de la especia más codiciada del universo."
+    },
+    {
+      "id": 6,
+      "categoryId": 2,
+      "titulo": "Neuromante",
+      "autor": "William Gibson",
+      "anio": 1984,
+      "precio": 11990,
+      "disponible": true,
+      "descripcion": "Un hacker caído en desgracia recibe una última oportunidad: un trabajo peligroso dentro del ciberespacio."
+    },
+    {
+      "id": 7,
+      "categoryId": 3,
+      "titulo": "El Hobbit",
+      "autor": "J. R. R. Tolkien",
+      "anio": 1937,
+      "precio": 12490,
+      "disponible": true,
+      "descripcion": "Bilbo Bolsón deja la comodidad de su hogar para acompañar a un grupo de enanos a recuperar un tesoro custodiado por un dragón."
+    },
+    {
+      "id": 8,
+      "categoryId": 3,
+      "titulo": "El nombre del viento",
+      "autor": "Patrick Rothfuss",
+      "anio": 2007,
+      "precio": 16990,
+      "disponible": true,
+      "descripcion": "Kvothe, convertido en un tranquilo posadero, cuenta la verdadera historia detrás de su leyenda."
+    },
+    {
+      "id": 9,
+      "categoryId": 3,
+      "titulo": "El Imperio Final (Mistborn)",
+      "autor": "Brandon Sanderson",
+      "anio": 2006,
+      "precio": 15490,
+      "disponible": false,
+      "descripcion": "Una joven ladrona con poderes especiales se une a una banda decidida a derrocar a un emperador inmortal."
+    },
+    {
+      "id": 10,
+      "categoryId": 4,
+      "titulo": "Asesinato en el Orient Express",
+      "autor": "Agatha Christie",
+      "anio": 1934,
+      "precio": 9990,
+      "disponible": true,
+      "descripcion": "Hércules Poirot investiga un crimen cometido en un tren que quedó detenido por la nieve."
+    },
+    {
+      "id": 11,
+      "categoryId": 4,
+      "titulo": "El nombre de la rosa",
+      "autor": "Umberto Eco",
+      "anio": 1980,
+      "precio": 15990,
+      "disponible": true,
+      "descripcion": "Un monje franciscano y su discípulo investigan una serie de muertes misteriosas en una abadía medieval."
+    },
+    {
+      "id": 12,
+      "categoryId": 4,
+      "titulo": "Los hombres que no amaban a las mujeres",
+      "autor": "Stieg Larsson",
+      "anio": 2005,
+      "precio": 13490,
+      "disponible": true,
+      "descripcion": "Un periodista y una hacker investigan la desaparición de una joven ocurrida décadas atrás."
+    },
+    {
+      "id": 13,
+      "categoryId": 5,
+      "titulo": "Sapiens: de animales a dioses",
+      "autor": "Yuval Noah Harari",
+      "anio": 2011,
+      "precio": 16990,
+      "disponible": true,
+      "descripcion": "Un recorrido por la historia de la humanidad, desde los cazadores-recolectores hasta la era moderna."
+    },
+    {
+      "id": 14,
+      "categoryId": 5,
+      "titulo": "Armas, gérmenes y acero",
+      "autor": "Jared Diamond",
+      "anio": 1997,
+      "precio": 15990,
+      "disponible": true,
+      "descripcion": "Explica por qué unas sociedades llegaron a dominar a otras, atendiendo a la geografía, el entorno y las enfermedades."
+    },
+    {
+      "id": 15,
+      "categoryId": 5,
+      "titulo": "SPQR: una historia de la antigua Roma",
+      "autor": "Mary Beard",
+      "anio": 2015,
+      "precio": 18990,
+      "disponible": true,
+      "descripcion": "Una mirada renovada a mil años de historia romana, desde su fundación hasta el apogeo del imperio."
+    },
+    {
+      "id": 16,
+      "categoryId": 6,
+      "titulo": "Clean Code",
+      "autor": "Robert C. Martin",
+      "anio": 2008,
+      "precio": 29990,
+      "disponible": true,
+      "descripcion": "Principios y ejemplos para escribir código legible, mantenible y fácil de cambiar."
+    },
+    {
+      "id": 17,
+      "categoryId": 6,
+      "titulo": "The Pragmatic Programmer",
+      "autor": "Andrew Hunt y David Thomas",
+      "anio": 1999,
+      "precio": 32990,
+      "disponible": true,
+      "descripcion": "Consejos prácticos para trabajar como programador de forma eficaz, curiosa y adaptable."
+    },
+    {
+      "id": 18,
+      "categoryId": 6,
+      "titulo": "Designing Data-Intensive Applications",
+      "autor": "Martin Kleppmann",
+      "anio": 2017,
+      "precio": 39990,
+      "disponible": false,
+      "descripcion": "Fundamentos de bases de datos, sistemas distribuidos y procesamiento de datos a gran escala."
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+:root {
+  --bg: #faf6ef;
+  --surface: #ffffff;
+  --ink: #2b2118;
+  --muted: #6f6256;
+  --accent: #8c3b2a;
+  --accent-dark: #6f2d1f;
+  --green: #2f5d50;
+  --border: #e6dccd;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(43, 33, 24, 0.08);
+
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.2;
+  margin: 0 0 0.5rem;
+}
+
+h1 {
+  font-size: clamp(1.7rem, 4vw, 2.3rem);
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p {
+  margin: 0 0 0.75rem;
+}
+
+a {
+  color: inherit;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ---------- Estructura ---------- */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: min(1100px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+  flex: 1;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+  border-top: 1px solid var(--border);
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* ---------- Navegación ---------- */
+.navbar {
+  background: var(--ink);
+  color: #fff;
+}
+
+.navbar__inner {
+  width: min(1100px, 100% - 2rem);
+  margin: 0 auto;
+  padding: 0.9rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.navbar nav a {
+  text-decoration: none;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  color: #e9dfd0;
+}
+
+.navbar nav a:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.navbar nav a.active {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---------- Botones ---------- */
+.btn {
+  display: inline-block;
+  border: 2px solid var(--accent);
+  background: var(--accent);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--accent);
+}
+
+.btn--ghost:hover:not(:disabled) {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.btn--small {
+  padding: 0.3rem 0.9rem;
+  font-size: 0.9rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 2px;
+}
+
+/* ---------- Inicio ---------- */
+.hero {
+  background: linear-gradient(135deg, #f1e4d0, #ead3b5);
+  border-radius: var(--radius);
+  padding: clamp(1.5rem, 5vw, 3rem);
+  margin-bottom: 2.5rem;
+}
+
+.hero p {
+  max-width: 55ch;
+  color: #4d3f33;
+  margin-bottom: 1.25rem;
+}
+
+/* ---------- Encabezados de página ---------- */
+.page-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Grillas y tarjetas ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.grid--books {
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.category-card,
+.book-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.category-card:hover,
+.book-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(43, 33, 24, 0.14);
+}
+
+.category-card {
+  padding: 1.25rem;
+}
+
+.category-card p {
+  margin: 0;
+}
+
+.category-card__icon {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-card {
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.book-card__info p {
+  margin: 0 0 0.2rem;
+}
+
+.price {
+  font-weight: 700;
+  color: var(--green);
+}
+
+.price--large {
+  font-size: 1.5rem;
+}
+
+/* ---------- Portadas ---------- */
+.cover {
+  aspect-ratio: 2 / 3;
+  border-radius: 6px 10px 10px 6px;
+  padding: 1rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  background: linear-gradient(145deg, hsl(var(--hue) 45% 38%), hsl(calc(var(--hue) + 30) 50% 24%));
+  box-shadow: inset 6px 0 0 rgba(0, 0, 0, 0.18);
+}
+
+.cover__title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.cover__author {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.cover--large {
+  width: min(260px, 100%);
+  box-shadow: inset 6px 0 0 rgba(0, 0, 0, 0.18), var(--shadow);
+}
+
+.cover--large .cover__title {
+  font-size: 1.4rem;
+}
+
+/* ---------- Detalle de libro ---------- */
+.book-detail {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.book-detail > div:last-child {
+  flex: 1;
+  min-width: 260px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.badge--ok {
+  background: #dcefe6;
+  color: #1f4a3c;
+}
+
+.badge--off {
+  background: #f4dcd6;
+  color: #7a2a1b;
+}
+
+/* ---------- Búsqueda ---------- */
+.search {
+  width: 100%;
+  max-width: 420px;
+  padding: 0.65rem 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font: inherit;
+  background: var(--surface);
+}
+
+/* ---------- Carga ---------- */
+.loader {
+  display: grid;
+  place-items: center;
+  gap: 0.75rem;
+  padding: 3rem 1rem;
+  color: var(--muted);
+}
+
+.loader p {
+  margin: 0;
+}
+
+.spinner {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 4px solid var(--border);
+  border-top-color: var(--accent);
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner {
+    animation-duration: 2.5s;
+  }
+
+  .category-card,
+  .book-card {
+    transition: none;
+  }
+}
+
+.refreshing {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ---------- Alertas / errores ---------- */
+.alert {
+  border-radius: var(--radius);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.alert--error {
+  background: #fbeae6;
+  border: 1px solid #efc4ba;
+}
+
+.alert--error h1,
+.alert--error h2 {
+  color: #7a2a1b;
+  font-size: 1.4rem;
+}
+
+.alert--warn {
+  background: #fff4d6;
+  border: 1px solid #ecd48a;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.alert--warn span {
+  flex: 1;
+  min-width: 220px;
+}
+
+.alert__actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+@media (max-width: 520px) {
+  .page-head {
+    flex-direction: column;
+  }
+}
